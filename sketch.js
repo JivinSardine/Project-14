@@ -54,27 +54,20 @@ function draw() {
 
   
   //creating continous balloons
-  var select_balloon = Math.round(random(1,1));
+  var select_balloon = Math.round(random(1,4));
   
   if (World.frameCount % 100 == 0) {
     if (select_balloon == 1) {
       redBalloon();
     }else if (select_balloon == 2) {
       blueBalloon();
-  }else if (select_balloon == 3) {
-    pinkBalloon();
-  }else if (select_balloon == 4) {
-    greenBalloon();
+    }else if (select_balloon == 3) {
+      pinkBalloon();
+    }else if (select_balloon == 4) {
+      greenBalloon();
   }
 }
 
-  
-
-  
-
-  
-
-  
   
   drawSprites();
 
@@ -114,7 +107,7 @@ function blueBalloon() {
 
 function greenBalloon() {
   var green = createSprite(0,Math.round(random(20, 370)), 10, 10);
-  green.addImage(blue_balloonImage);
+  green.addImage(green_balloonImage);
   green.velocityX = 3;
   green.lifetime = 150;
   green.scale = 0.1;
@@ -122,7 +115,7 @@ function greenBalloon() {
 
 function pinkBalloon() {
   var pink = createSprite(0,Math.round(random(20, 370)), 10, 10);
-  pink.addImage(blue_balloonImage);
+  pink.addImage(pink_balloonImage);
   pink.velocityX = 3;
   pink.lifetime = 150;
   pink.scale = 0.1;
